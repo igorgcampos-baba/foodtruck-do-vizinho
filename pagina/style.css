@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;   
+    
+} 
+html{
+    scroll-behavior: smooth;
+    
+}
+body{
+    background-color: #c97338;
+}
+.container{
+    
+    max-width: 1080px;
+    padding: 0px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container0{
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    align-items:center;
+    justify-content:center; 
+    padding-top: 100px ;
+    padding-bottom: 10px;
+    color: #ffffff; 
+  
+}
+.container1{
+    max-width:100%;
+    width: 100%;
+    margin: 0 ;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #f2efe9; 
+}
+.container1 nav{
+    padding-right: 30px;
+}
+.container2{
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 50px;
+        padding-right: 50px;     
+        color: #f2efe9; 
+        background-color: #c97338;
+    }   
+.container3{
+    max-width:100%;
+    width: 100%;
+    margin: 0 ;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: #141414;
+    }
+header{
+    background-image: url(imagem/O\ Melhor3.png);  
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-bottom: 600px;
+    
+}
+.logo,.sociais{
+    width: 25%;
+}
+.logo img{
+    width: 100px;
+    
+}
+.menu{
+    width: 60%;
+    padding-bottom: 20px;
+    margin-top: 10px;
+}
+.menu nav a{
+
+    text-decoration: none;
+    padding-right: 50px;
+    font-size: 20px;
+    position: relative;
+}
+.sociais button{
+    width: 35px;
+    height: 35px;
+    color: #141414;
+    border: none;
+    border-radius: 6px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    
+}
+.sociais button i{
+    font-size: 25px;
+    cursor: pointer;
+}
+.rodape{
+    background-color: #c97338;
+    max-width:100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rodape nav a{
+    text-decoration: none;
+    padding-right: 20px;
+}
+
+.container-carrossel {
+    padding: 0 9rem;}
+
+
+
+    
+    
