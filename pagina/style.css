@@ -1,140 +1,225 @@
+/* Importa a fonte 'Open Sans' e 'Oswald' do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;   
-    
-} 
-html{
-    scroll-behavior: smooth;
-    
+
+/**************** CONFIGURAÇÕES GERAIS ****************/
+/* Reset CSS básico para todos os elementos */
+* {
+    margin: 0;          /* Remove margens padrão */
+    padding: 0;         /* Remove paddings padrão */
+    box-sizing: border-box; /* Mantém dimensões incluindo bordas */
+    font-family: "Open Sans", sans-serif; /* Define fonte padrão */
 }
-body{
-    background-color: #c97338;
+
+/* Configurações gerais do HTML */
+html {
+    scroll-behavior: smooth; /* Rolagem suave entre seções */
+    font-size: 16px;         /* Tamanho base para unidades rem */
 }
-.container{
-    
-    max-width: 1080px;
-    padding: 0px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
+
+/* Estilos globais do corpo do documento */
+body {
+    background-color: #c97338; /* Cor de fundo laranja */
+    color: #141414;            /* Cor principal do texto */
+    line-height: 1.6;          /* Espaçamento entre linhas */
+}
+
+/**************** HEADER ****************/
+/* Estilização do cabeçalho principal */
+header {
+    background-image: url(imagem/O\ Melhor3.png); /* Imagem de fundo */
+    background-position: center center;          /* Centraliza imagem */
+    background-size: cover;                      /* Cobrir todo o espaço */
+    background-repeat: no-repeat;                /* Evita repetição */
+    min-height: 100vh;          /* Altura mínima da viewport */
+    position: relative;         /* Permite posicionamento absoluto nos filhos */
+    overflow: hidden;           /* Esconde conteúdo que ultrapassar */
+}
+
+/* Container principal para alinhamento de conteúdo */
+.container {
+    flex-wrap: wrap; /* Permite quebra de linha */
+    gap: 1rem; /* Espaço entre elementos */
+    max-width: 1000px;    /* Largura máxima do conteúdo */
+    margin: 0 auto;       /* Centraliza horizontalmente */
+    padding: 1rem 2rem;   /* Espaçamento interno */
+    display: flex;        /* Layout flexível */
+    justify-content: space-between; /* Espaço entre elementos */
+    align-items: center;  /* Alinha verticalmente */
+}
+
+/* Estilização da logo */
+.logo img {
+    max-width: 120px;     /* Largura máxima */
+    width: 100%;          /* Largura responsiva */
+    height: auto;         /* Altura proporcional */
+    transition: transform 0.3s ease; /* Efeito de hover suave */
+    transform: translateX(-150px);
+}
+
+/* Menu de navegação */
+.menu nav {
+    display: flex;        /* Layout flexível para links */
+    gap: 2rem;            /* Espaço entre itens */
+    font-size: 100px;
+}
+
+/* Links do menu */
+.menu nav a {
+    color: #ffffff;       /* Cor branca */
+    text-decoration: none; /* Remove sublinhado */
+    font-size: 1.1rem;     /* Tamanho do texto */
+    position: relative;    /* Para efeitos de hover */
+    padding: 0.5rem 1rem;  /* Espaçamento interno */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Efeito hover nos links */
+.menu nav a:hover {
+    text-decoration: underline; /* Sublinhado ao passar mouse */
+    transform: translateY(-2px); /* Levanta ligeiramente */
+}
+
+/* Redes sociais */
+.sociais {
+    display: flex;        /* Alinha ícones em linha */
+    gap: 1.5rem;          /* Espaço entre ícones */
+}
+
+/* Ícones sociais */
+.sociais a {
+    color: #ffffff;       /* Cor branca */
+    font-size: 1.5rem;    /* Tamanho dos ícones */
+    transition: transform 0.3s ease; /* Efeito de escala */
+}
+
+/* Efeito hover nos ícones */
+.sociais a:hover {
+    transform: scale(1.15); /* Aumenta ligeiramente */
+}
+
+/**************** SEÇÃO SOBRE ****************/
+/* Container da seção Sobre */
+ .container1 {
+    display: grid;                   /* Layout em grid */
+    grid-template-columns: 1fr 1fr;  /* Duas colunas iguais */
+    gap: 4rem;                       /* Espaço entre colunas */
+    padding: 4rem 2rem;              /* Espaçamento interno */
+    align-items: center;             /* Alinha verticalmente */
+}
+
+/* Texto da seção Sobre */
+
+/* Imagem da seção Sobre */
+#sobre img {
+    padding: 0%, 50%;
+    width: 100%;           /* Largura responsiva */
+    max-width: 400px;      /* Largura máxima */
+    border-radius: 50%;     /* Formato circular */
+    aspect-ratio: 1/1;     /* Proporção quadrada */
+    object-fit: cover;     /* Preenchimento da imagem */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/**************** SEÇÃO EVENTOS ****************/
+#eventos {
+    background-color: #f2efe9;
+}
+/* Estilização do carrossel */
+.carousel {
+    border-radius: 15px;           /* Bordas arredondadas */
+    overflow: hidden;              /* Esconde excesso */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2); /* Sombra mais intensa */
+}
+
+/* Container interno do carrossel */
+.carousel-inner {
+    width:100% ;
+    aspect-ratio: 16/9; /* Proporção widescreen (16:9) */
+}
+
+/**************** SEÇÃO CARDÁPIO ****************/
+/* Ajustes específicos para o carrossel do cardápio */
+#carouselcardapio .carousel-inner {
+    aspect-ratio: 1/1.414; /* Proporção de folha A4 */
+}
+
+/**************** SEÇÃO CONTATOS ****************/
+/* Grid de duas colunas para contatos */
+#contatos .container3 {
+        
     justify-content: center;
-}
-.container0{
-    max-width: 1080px;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    align-items:center;
-    justify-content:center; 
-    padding-top: 100px ;
-    padding-bottom: 10px;
-    color: #ffffff; 
-  
-}
-.container1{
-    max-width:100%;
-    width: 100%;
-    margin: 0 ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
     align-items: center;
-    justify-content: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    background-color: #f2efe9; 
+    text-align: center; /* Alinhamento centralizado */
 }
-.container1 nav{
-    padding-right: 30px;
+
+/**************** FOOTER ****************/
+.rodape { 
+    justify-items: center;
+    padding: 2rem;
+    background-color: #f2efe9; /* Cor igual ao body */
 }
-.container2{
-        max-width: 100%;
-        width: 100%;
-        margin: 0 auto;
-        align-items: center;
-        justify-content: center;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        padding-left: 50px;
-        padding-right: 50px;     
-        color: #f2efe9; 
-        background-color: #c97338;
-    }   
-.container3{
-    max-width:100%;
-    width: 100%;
-    margin: 0 ;
-    align-items: center;
-    justify-content: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-    color: #141414;
+
+/* Links do footer */
+.rodape nav a {
+    color: #141414; 
+    font-size: 1.1rem;
+    transition: all 0.3s ease; /* Efeito de hover igual ao menu */
+}
+
+/**************** RESPONSIVIDADE ****************/
+@media (max-width: 992px) {
+    /* Ajusta grids para 1 coluna em tablets */
+    #sobre .container,
+    #eventos .container,
+    #contatos .container3 {
+        grid-template-columns: 1fr;
     }
-header{
-    background-image: url(imagem/O\ Melhor3.png);  
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    padding-bottom: 600px;
-    
-}
-.logo,.sociais{
-    width: 25%;
-}
-.logo img{
-    width: 100px;
-    
-}
-.menu{
-    width: 60%;
-    padding-bottom: 20px;
-    margin-top: 10px;
-}
-.menu nav a{
-
-    text-decoration: none;
-    padding-right: 50px;
-    font-size: 20px;
-    position: relative;
-}
-.sociais button{
-    width: 35px;
-    height: 35px;
-    color: #141414;
-    border: none;
-    border-radius: 6px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    
-}
-.sociais button i{
-    font-size: 25px;
-    cursor: pointer;
-}
-.rodape{
-    background-color: #c97338;
-    max-width:100%;
-    width: 100%;
-    padding: 0px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.rodape nav a{
-    text-decoration: none;
-    padding-right: 20px;
+    .logo img {       
+        transform: translateX(-30px);
+    }
 }
 
-.container-carrossel {
-    padding: 0 9rem;}
+@media (max-width: 768px) {
+    html{
+        font-size: 18px;
+    }
+    /* Esconde menu em mobile */
+    .menu nav {
+        display: none;
+    }
+    
+    /* Ajusta altura do header */
+    header {
+        min-height: 70vh;
+        background-position:70% center; /* Ajuste o valor percentual conforme necessário */
+    }
+    #carouselcardapio {
+        padding: 3rem !important;}
+        
+}
 
-
-
+@media (max-width: 576px) {
+    /* Reduz tamanho da fonte base */
+    html {
+        font-size: 16px;    
+    }
     
     
+    /* Ajustes finos para mobile */
+    #sobre img {
+        max-width: 300px;
+    }
+    body {
+        overflow-x: hidden; /* Oculta transbordamento horizontal */
+    }
+    #carouselcardapio {
+        padding: 3rem !important; /* Troque no CSS */
+    }
+    img, .carousel, .container, .carousel-inner {
+        max-width: 100%; /* Limita largura máxima */
+    }
+    
+}
